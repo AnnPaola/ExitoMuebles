@@ -49,7 +49,58 @@ punto.forEach( ( cadaPunto , i )=> {
     })
 })
 
+/***********        pagina contacto      ***********************/
+function validarFormulario() {
+  let nombre = document.getElementById("nombre").value;
+  let email = document.getElementById("email").value;
+  let asunto = document.getElementById("asunto").value;
+  let mensaje = document.getElementById("mensaje").value;
+  let medioContacto = document.querySelector('input[name="medioContacto"]:checked');
 
+  let errores = false;
+
+  if (nombre === "") {
+      document.getElementById("errorNombre").textContent = "El nombre es obligatorio";
+      errores = true;
+  } else {
+      document.getElementById("errorNombre").textContent = "";
+  }
+
+  if (email === "") {
+      document.getElementById("errorEmail").textContent = "El correo electrónico es obligatorio";
+      errores = true;
+  } else {
+      if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+          document.getElementById("errorEmail").textContent = "El correo electrónico no es válido";
+          errores = true;
+      } else {
+          document.getElementById("errorEmail").textContent = "";
+      }
+  }
+
+  if (asunto === "") {
+      document.getElementById("errorAsunto").textContent = "El asunto es obligatorio";
+      errores = true;
+  } else {
+      document.getElementById("errorAsunto").textContent = "";
+  }
+
+  if (mensaje === "") {
+      document.getElementById("errorMensaje").textContent = "El mensaje es obligatorio";
+      errores = true;
+  } else {
+      document.getElementById("errorMensaje").textContent = "";
+  }
+
+  if (!medioContacto) {
+      document.getElementById("errorMedioContacto").textContent = "Debe seleccionar un medio de contacto";
+      errores = true;
+  } else {
+      document.getElementById("errorMedioContacto").textContent = "";
+  }
+
+  return !errores;
+}
 
 
 

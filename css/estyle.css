@@ -85,7 +85,7 @@ body {
   max-width: 100%;
   height: auto;
   z-index: -1;
-  opacity: 0.5; /* Opacidad de la imagen (entre 0 y 1) */
+  opacity: 0.4; /* Opacidad de la imagen (entre 0 y 1) */
 }
 
 .main_galeria {
@@ -210,17 +210,8 @@ h2 {
 }
 
 /*-------------------Pagina contacto---------------------------------*/
-.main_formulario {
-  border: 2px solid rgba(46, 176, 163, 0.978);
-  display: flex;
-}
-.main_contacto {
-  font-family: "Cinzel Decorative", serif;
-  font-weight: 700;
-  font-size: 1.4em;
-  overflow: hidden;
-}
 .main_ofrecemos {
+ 
   display: flex;
   background-color: rgba(46, 176, 163, 0.978);
   gap: 1em;
@@ -229,56 +220,137 @@ h2 {
   font-size: 1.3em;
   text-align: center;
 }
-.main_contacto form {
-  border-color: #000000;
-  padding: 20px;
-  width: 600px;
-  border-radius: 5px;
-  color: #000000;
-  overflow: hidden;
+
+.FormularioContacto{
+   padding: 1em;
 }
 
-label {
-  font-size: 20px;
-
-  display: block;
-  margin-top: 10px;
-}
-
-input,
-textarea {
-  font-size: 20px;
-  width: 500px;
-  padding: 10px;
-  border-radius: 5px;
-  box-sizing: border-box;
-  background-color: rgba(183, 196, 195, 0.978);
-}
-/*
-button {
-  font-size: 20px;
+.container {
+  display: flex;
+  align-items: center;
+ width: 100%;
+  border: 1px solid rgba(46, 176, 163, 0.978);
+  
+  background-color: #068683;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3) ;
+  gap: 2em;
   font-weight: bold;
-  text-align: center;
-  background-color: rgba(46, 176, 163, 0.978);
-  color: #000000;
+}
+.mapa {
 
-  border-radius: 20px;
-  cursor: pointer;
-  margin-top: 20px;
-  width: 100px;
-}
-button:hover {
-  background-color: #daefeb;
-  border-radius: 5px;
-}
-*/
-.main_mapa {
-  z-index: -1;
-  width: 500px;
+  width: 40em;
+  margin: 0 auto;
+    padding: 2em;
   font-size: 30px;
   overflow: hidden;
+  font-size: 1em;
+  gap: 1em;
 }
-/*************************pagina contacto, carrousel*********************/
+.mapa p{
+  font-family: "Cinzel Decorative", serif;
+}
+
+
+
+
+form {
+  display: flex; /* Make the form elements horizontal */
+  flex-direction: column; /* Stack elements vertically */
+  width: 70%; /* Form takes up half the width */
+  margin: 0 auto; /* Center the form horizontally */
+  margin-left: 3em;
+  margin-bottom: 2em;
+}
+.datos {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+}
+.form-control {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #068683;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.form-check-input {
+  margin-right: 5px;
+  cursor: pointer;
+}
+.error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #daefeb;
+  color: #000000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  gap:1em ;
+}
+input{
+  background-color: #daefeb;;
+}
+
+@media (max-width: 900px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+      width: 70%;
+      
+      margin: 0 auto;
+  }
+  .mapa{
+    position: relative;
+  }
+  .form-control {
+      width: 95%;
+  }
+
+  .form-check {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .form-check-label {
+      margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 550px) {
+  
+  .container {
+          width: 100%;
+    font-size: 20px;
+    margin: 0 auto;
+  }
+  .form-label {
+      font-size: 14px;
+  }
+
+  .form-control {
+      font-size: 14px;
+  }
+
+  button {
+      font-size: 14px;
+      padding: 8px 15px;
+      cursor: pointer;
+  }
+}
+
+
+
+/*************************pagina muebles, carrousel*********************/
 
 .carrousel {
  

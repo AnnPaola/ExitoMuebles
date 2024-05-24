@@ -40,6 +40,7 @@
     <title>Contacto</title>
   </head>
   <body>
+
       <header class="header">
       <div class="header_logo">
         <img src="../img/LogoRos.jpg" alt="logo" />
@@ -75,50 +76,81 @@
         </p>
       </div>
 
-      <h1>Contacto</h1>
+     
+<h1>Formulario de contacto</h1>
+      <div class="container">
+        
+        
+        <form id="FormularioContacto" onsubmit="return validarFormulario()">
+           
+          <div class="datos">
+                <label for="nombre" class="form-label">Nombre completo:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+                <span class="error" id="errorNombre"></span>
+            </div>
 
-      <section class="main_contacto">
-        <form>
-          <div clase="mian_formulario">
-            <fieldset>
-              <label for="nombre-apellido">Nombre y Apellido:</label>
-              <input tipe="text" id="nombre-apellido" />
-              <br />
-              <label for="correo">Correo electrónico:</label>
-              <input type="email" id="correo" />
-              <br />
-              <label for="telefono">Teléfono:</label>
-              <input type="tel" id="telefono" />
-              <br />
-              <label for="mensaje">Mensaje:</label>
+            <div class="datos">
+                <label for="email" class="form-label">Correo electrónico:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+                <span class="error" id="errorEmail"></span>
+            </div>
 
-              <textarea id="mensaje" name="mensaje" rows="4" cols="50" required>
-              </textarea>
-              <br />
-              <button type="submit">Enviar</button>
-            </fieldset>
-          </div>
+            <div class="datos">
+                <label for="asunto" class="form-label">Asunto:</label>
+                <select class="form-select" id="asunto" name="asunto" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="consulta">Consulta</option>
+                    <option value="sugerencia">Sugerencia</option>
+                    <option value="reclamo">Reclamo</option>
+                </select>
+                <span class="error" id="errorAsunto"></span>
+            </div>
+
+            <div class="datos">
+                <label for="mensaje" class="form-label">Mensaje:</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="3" required></textarea>
+                <span class="error" id="errorMensaje"></span>
+            </div>
+
+            <div class="datos">
+                <label for="medioContacto" class="form-label">Medio de contacto preferido:</label>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="medioContacto" name="medioContacto" value="medioContacto" required>
+                    <label class="form-check-label" for="medioContacto">Instagram</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="correoElectronico" name="medioContacto" value="correoElectronico" required>
+                    <label class="form-check-label" for="correoElectronico">Correo electrónico</label>
+                </div>
+                <span class="error" id="errorMedioContacto"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar formulario</button>
+
         </form>
-      </section>
-
-      <div class="main_mapa">
-        Horarios de atención: de 9 a 18 hs.
-        <br />
-        <br />
-        Rawson 42 | (C1182ABB) | Ciudad de Buenos Aires
-        <br />
-        <br />
-        <br />
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.669142462972!2d-58.42819592425937!3d-34.61252697295115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca5dac9e0bbb%3A0x2ab5770a320fb2b2!2sRawson%2042%2C%20C1182ABB%20CABA!5e0!3m2!1ses-419!2sar!4v1702290011532!5m2!1ses-419!2sar"
-          width="400"
+        <div class="mapa">
+          <p>Horarios de atención: de 9 a 18 hs.
+          <br />
+              Rawson 42 | (C1182ABB) | CABA
+          <br />
+         </p>
+          
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.669142462972!2d-58.42819592425937!3d-34.61252697295115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca5dac9e0bbb%3A0x2ab5770a320fb2b2!2sRawson%2042%2C%20C1182ABB%20CABA!5e0!3m2!1ses-419!2sar!4v1702290011532!5m2!1ses-419!2sar"
+            width="400"
           height="300"
           style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        
+
       </div>
+
+      
+
     </main>
 
     
